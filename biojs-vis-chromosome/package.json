@@ -2,10 +2,10 @@
   "name": "biojs-vis-chromosome",
   "description": "Component to represent a chromosome with its bands",
   "version": "0.0.1",
-  "homepage": "http://github.com/biojs/biojs2",
+  "homepage": "http://github.com/4ndr01d3/biojs-vis-chromosome",
   "repository": {
     "type": "git",
-    "url": "git://github.com/biojs/biojs2"
+    "url": "git://github.com/4ndr01d3/biojs-vis-chromosome"
   },
   "author": "Gustavo A. Salazar <gustavoadolfo.salazar@gmail.com>",
   "dependencies": {
@@ -15,22 +15,45 @@
     "jquery": "^2.1.1"
   },
   "devDependencies": {
-    "browserify": "~4.2.0",
-    "chai": "^1.9.1",
-    "mocha": "^1.21.4"
+	"biojs-sniper": "0.0.4",
+	"browserify": "^5.12.1",
+	"chai": "^1.9.1",
+	"gulp": "^3.8.8",
+	"gulp-chmod": "^1.1.1",
+	"gulp-gzip": "0.0.8",
+	"gulp-jshint": "^1.8.4",
+	"gulp-mocha": "^1.0.0",
+	"gulp-mocha-phantomjs": "^0.5.0",
+	"gulp-rename": "^1.2.0",
+	"gulp-rimraf": "^0.1.0",
+	"gulp-streamify": "0.0.5",
+	"gulp-uglify": "^1.0.1",
+	"gulp-watch": "^1.0.2",
+	"mkdirp": "^0.5.0",
+	"mocha": "~1.20.1",
+	"vinyl-source-stream": "^1.0.0",
+	"watchify": "^1.0.2"
   },
   "keywords": [
     "div",
     "chromosome",
-    "bands"
+    "bands",
+    "biojs"
   ],
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec",
-    "build-browser": "browserify browser.js  > biojs-vis-chromosome.min.js"
+    "build-browser": "gulp"
   },
   "license": "Apache 2",
   "bugs": {
-    "url": "https://github.com/biojs/biojs2/issues"
+    "url": "https://github.com/4ndr01d3/biojs-vis-chromosome/issues"
+  },
+  "sniper": {
+  	"js": ["/build/chr.js",
+  		"http://code.jquery.com/jquery-1.11.0.min.js"],
+	"css": ["/css/chromosome.css", "https://raw.githubusercontent.com/4ndr01d3/js-components/master/util-area_selector/css/area_selector.css",
+	"https://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css"],
+	"first": "example"
   }
 }
