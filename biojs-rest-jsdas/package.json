@@ -23,7 +23,7 @@
     "mocha": "^1.21.4"
   },
   "keywords": [
-    "bio, das, annotations"
+    "biojs", "bio", "das", "annotations"
   ],
   "main": "index.js",
   "scripts": {

@@ -20,7 +20,7 @@
   },
   "keywords": [
     "div",
-    "area"
+    "area", "biojs"
   ],
   "main": "index.js",
   "scripts": {
